@@ -90,12 +90,8 @@ int main(int argc, char *argv[])
     cout << "v3: " << endl;
     cout << ArrayToString(v3) << endl;
 
-    const auto today_time = std::chrono::system_clock::now(); //prendo l'orario corrente del sistema operativo 
-    std::cout << "\nEpoch Time (since 1/1/1970): " << std::chrono::duration_cast<std::chrono::milliseconds>(today_time.time_since_epoch()).count() << endl; //restituisce il numero di millisecondi trascorsi dal 1 gennaio 1970 (data di riferimento per i sistemi Unix) fino a today_time, salvato alla riga prima. la durata viene poi convertita in millisecondi da duration cast. Infine .count() restituisce il numero di millisecondi come un long long int.
-
-
     unsigned int num_experiment = 100; // numero di esperimenti da eseguire per calcolare il tempo medio di esecuzione degli algoritmi di ordinamento.
-    cout << "Sorting Times (microseconds): " << endl;
+    cout << "\nSorting Times (microseconds): " << endl;
     // BUBBLESORT V1 
     double time_elapsed_bubble_v1 = 0.0;
     
